@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Si — Search &amp; AI Visibility Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#F5F0E8;--surface:#EDE5D8;--ink:#15130F;--stone:#5F5851;--line:#D9CFBF;--paper:#fff;--accent:#6B4429;--bad:#9A3B2E;--warn:#8A6A1F;--good:#3F6B4A;--display:'Cormorant Garamond',Georgia,serif;--body:'Jost','Helvetica Neue',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05}
+header{background:var(--ink);color:var(--paper);padding:56px 0 64px}
+header img{height:40px;filter:invert(1);margin-bottom:48px}
+header .eyebrow{color:#D9BBA2}
+header h1{font-size:64px;margin:16px 0 20px}
+header h1 em{font-style:italic}
+header p{font-size:18px;font-weight:300;color:rgba(255,255,255,.8);max-width:640px}
+.meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:32px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+section>.wrap>h2{font-size:44px;margin:12px 0 16px}
+.lead{font-size:17px;font-weight:300;color:var(--stone);max-width:680px;margin-bottom:36px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);padding:28px}
+.card .n{font-family:var(--display);font-size:52px;line-height:1;color:var(--accent);margin-bottom:12px}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{font-size:14px;color:var(--stone)}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);font-size:14px}
+th{text-align:left;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);background:var(--surface);padding:12px 16px;border-bottom:1px solid var(--line)}
+td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td strong{font-weight:500}
+.pill{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border:1px solid currentColor;white-space:nowrap}
+.bad{color:var(--bad)}.warn{color:var(--warn)}.good{color:var(--good)}
+.muted{color:var(--stone)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.phase{background:var(--paper);border:1px solid var(--line);padding:28px}
+.phase .eyebrow{display:block;margin-bottom:8px}
+.phase h3{font-size:26px;margin-bottom:14px}
+.phase ul{list-style:none;display:grid;gap:10px;font-size:14px}
+.phase li{padding-left:18px;position:relative}
+.phase li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:1px;background:var(--accent)}
+.quote{font-family:var(--display);font-size:30px;font-style:italic;line-height:1.25;border-left:2px solid var(--accent);padding-left:24px;max-width:760px;margin:8px 0 24px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.cols ul{list-style:none;display:grid;gap:10px;font-size:15px}
+.cols li{padding-left:22px;position:relative}
+.cols li::before{position:absolute;left:0;font-weight:500}
+.cols .yes li::before{content:"✓";color:var(--good)}
+.cols .no li::before{content:"✕";color:var(--bad)}
+footer{padding:56px 0 72px;font-size:13px;color:var(--stone)}
+footer h3{font-size:24px;color:var(--ink);margin-bottom:12px}
+.cta{background:var(--ink);color:var(--paper);padding:56px 0}
+.cta h2{font-size:40px;margin-bottom:14px}
+.cta p{color:rgba(255,255,255,.8);max-width:620px;font-weight:300}
+.cta a{display:inline-block;margin-top:24px;background:var(--paper);color:var(--ink);padding:16px 26px;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.scroll{overflow-x:auto}
+@media (max-width:820px){
+  .wrap{padding:0 20px}
+  header h1{font-size:42px}
+  section>.wrap>h2{font-size:34px}
+  .cards,.plan,.cols{grid-template-columns:1fr}
+  table{font-size:13px;min-width:640px}
+  .quote{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="https://si-retail.com/cdn/shop/files/si_logo_black.png?v=1782701855&width=300" alt="Si">
+    <div class="eyebrow">Search &amp; AI Visibility Audit</div>
+    <h1>Can people — and AI — <em>find Si?</em></h1>
+    <p>When shoppers search Google or ask ChatGPT, Gemini or Perplexity for an affordable luxury brand in Pakistan, does Si come up? This audit checks — and lays out exactly what to fix.</p>
+    <div class="meta"><span>Prepared for Ayesha Iftikhar</span><span>si-retail.com</span><span>20 November 2026</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Summary</div>
+    <h2>Three things stand out</h2>
+    <p class="lead">Si has a strong product story — fine fabrics, honest pricing, a clear "quiet luxury" point of view. Right now, search engines and AI assistants can't see it.</p>
+    <div class="cards">
+      <div class="card"><div class="n">0</div><h3>Search results for Si's own name</h3><p>In our tests, searches for "Si Retail", "si-retail.com" and "The si clothing" returned no Si pages. "SI Retail" is already used by an unrelated shop-fitting company, which takes those results.</p></div>
+      <div class="card"><div class="n">0</div><h3>Third-party mentions found</h3><p>We found no press, blog, directory or review mentioning Si or its founder. AI assistants recommend brands that others talk about — so today they have nothing to cite.</p></div>
+      <div class="card"><div class="n">5</div><h3>Competitors showing up instead</h3><p>For "linen co-ord sets" and "quiet luxury" searches, Limelight, Laam, The Linen Company, 1947 Clothing and Ochre Wear appear. Si does not.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Search visibility</div>
+    <h2>What shoppers see today</h2>
+    <p class="lead">Nine searches a Si customer might plausibly make — for the brand, the founder and the category.</p>
+    <div class="scroll"><table>
+      <tr><th>Search</th><th>Si appears?</th><th>What appears instead</th></tr>
+      <tr><td><strong>Si Retail</strong> (with "affordable luxury Pakistan")</td><td><span class="pill bad">No</span></td><td>Simaals, Sapphire, Khaadi; general "top brands" lists</td></tr>
+      <tr><td><strong>si-retail.com</strong></td><td><span class="pill bad">No</span></td><td>SI Retail — an Australian/UK shop-fitting company</td></tr>
+      <tr><td><strong>"The si clothing" Pakistan</strong> <span class="muted">(the name in Si's page titles)</span></td><td><span class="pill bad">No</span></td><td>Generic articles on traditional Pakistani dress</td></tr>
+      <tr><td><strong>siretailofficial instagram</strong></td><td><span class="pill bad">No</span></td><td>SIR the Label (Australia)</td></tr>
+      <tr><td><strong>Ayesha Iftikhar SI fashion house founder</strong></td><td><span class="pill bad">No</span></td><td>Other designers named Ayesha / Aysha</td></tr>
+      <tr><td><strong>"Pakistan's first affordable luxury fashion house"</strong></td><td><span class="pill bad">No</span></td><td>Labels, Cast and Crew, Sapphire Elan press stories</td></tr>
+      <tr><td><strong>Affordable luxury brands Pakistan women western wear</strong></td><td><span class="pill bad">No</span></td><td>Khaadi, Limelight, Gul Ahmed, Generation, Miles</td></tr>
+      <tr><td><strong>Quiet luxury fashion brand Pakistan</strong></td><td><span class="pill bad">No</span></td><td>House of Amir Adnan, Ochre Wear ("quiet luxury co-ords"), Saira Rizwan</td></tr>
+      <tr><td><strong>Linen co-ord set women Pakistan online</strong></td><td><span class="pill bad">No</span></td><td>Limelight, Laam, The Linen Company, 1947 Clothing, Markaz</td></tr>
+    </table></div>
+    <p class="muted" style="font-size:13px;margin-top:14px">"Quiet luxury" is Si's own positioning — and a competitor is currently being described with it. That phrase is worth claiming.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Website health</div>
+    <h2>What search engines and AI read on si-retail.com</h2>
+    <p class="lead">Checked on the homepage, a collection page, product pages (10 sampled), the sitemap, robots.txt and the full product feed (236 products).</p>
+    <div class="scroll"><table>
+      <tr><th>Area</th><th>Status</th><th>What we found</th><th>Fix</th></tr>
+      <tr><td><strong>Brand name</strong></td><td><span class="pill bad">Fix</span></td><td>Every page title ends "– The si clothing". Elsewhere the brand is "Si", "SI" and "Si Retail". Search engines and AI can't tell these are one brand.</td><td>Choose one name (e.g. "Si — Affordable Luxury") and use it everywhere: titles, socials, directories.</td></tr>
+      <tr><td><strong>Homepage</strong></td><td><span class="pill bad">Fix</span></td><td>Title is only "The si clothing". No meta description. No main heading (H1).</td><td>Title + description that say who Si is and what it sells; add an H1.</td></tr>
+      <tr><td><strong>Product titles</strong></td><td><span class="pill bad">Fix</span></td><td>All 10 sampled page titles contain internal SKU codes (e.g. "CLASSIC BUTTON-DOWN SHIRT - MW06SS26E"). 235 of 236 names are in ALL CAPS.</td><td>Readable titles: "Mock Neck Top in Black — Viscose Jersey | Si".</td></tr>
+      <tr><td><strong>Duplicate names</strong></td><td><span class="pill warn">Improve</span></td><td>54 product names are used by more than one product (colour variants listed as separate products).</td><td>Add the colour to each name, or merge into one product with colour options.</td></tr>
+      <tr><td><strong>Structured data</strong></td><td><span class="pill bad">Fix</span></td><td>No schema markup found in the page code of the homepage, collection or product pages — no Product, Organization or Breadcrumb data.</td><td>Add Product (price, stock, material, sizes), Organization (founder, contact) and FAQ schema.</td></tr>
+      <tr><td><strong>Collections</strong></td><td><span class="pill warn">Improve</span></td><td>35 collections, with overlaps: "NEW IN" three times, "Beyond" / "Beyond new" / "beyond-copy", "MOONSOON" twice (misspelt).</td><td>Merge duplicates, fix names, add a short description to each.</td></tr>
+      <tr><td><strong>Content</strong></td><td><span class="pill bad">Fix</span></td><td>The blog ("News") has no articles. No FAQ page. Product descriptions follow a fixed template.</td><td>Fabric, styling and size guides; an FAQ; richer product copy.</td></tr>
+      <tr><td><strong>Copy errors</strong></td><td><span class="pill warn">Improve</span></td><td>"Stripped Crew Neck Shirt" (striped); "INFORMANTION" in the site footer.</td><td>Correct the spelling.</td></tr>
+      <tr><td><strong>Image descriptions</strong></td><td><span class="pill warn">Improve</span></td><td>10 of 49 homepage images have no alt text.</td><td>Describe every image (product, colour, fabric).</td></tr>
+      <tr><td><strong>AI-agent files</strong></td><td><span class="pill good">Good</span></td><td>Shopify's <code>llms.txt</code> and agentic discovery sitemap are live; AI crawlers aren't blocked.</td><td>Keep — and add a brand-level "About Si" section for AI to read.</td></tr>
+      <tr><td><strong>Sitemap &amp; canonicals</strong></td><td><span class="pill good">Good</span></td><td>Sitemap lists 237 products, 35 collections, 4 pages. Canonical URLs are set. Product pages have meta descriptions.</td><td>No action.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">AI search (AEO &amp; GEO)</div>
+    <h2>Getting Si recommended by AI assistants</h2>
+    <p class="quote">"What's a good affordable luxury clothing brand in Pakistan?"</p>
+    <p class="lead">More shoppers now ask this of ChatGPT, Gemini or Perplexity instead of scrolling Google. These assistants recommend brands that are clearly described, consistent everywhere, and talked about by others.</p>
+    <div class="cols">
+      <div><h3 style="font-size:24px;margin-bottom:14px">Si already has</h3><ul class="yes">
+        <li>A distinctive story and founder</li>
+        <li>Detailed fabric data on every product (material, fit, stretch, feel)</li>
+        <li>Shopify's AI-agent files switched on</li>
+        <li>Clear prices and a real exchange policy</li></ul></div>
+      <div><h3 style="font-size:24px;margin-bottom:14px">Si is missing</h3><ul class="no">
+        <li>One consistent brand name and description</li>
+        <li>Mentions from press, blogs, creators or communities</li>
+        <li>Pages that answer shoppers' questions directly</li>
+        <li>Structured data that machines can read</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The plan</div>
+    <h2>90 days to being found</h2>
+    <p class="lead">Ordered by impact and effort. Phase 1 alone fixes most of the website issues above.</p>
+    <div class="plan">
+      <div class="phase"><span class="eyebrow">Weeks 1–2</span><h3>Fix the foundations</h3><ul>
+        <li>One brand name everywhere</li><li>Homepage title, description, heading</li><li>Readable product titles without SKU codes</li><li>Product, Organization &amp; FAQ schema</li><li>Merge duplicate collections, fix typos, add alt text</li></ul></div>
+      <div class="phase"><span class="eyebrow">Weeks 3–6</span><h3>Become the answer</h3><ul>
+        <li>FAQ page: exchanges, sizing, fabrics, delivery</li><li>Si Journal: fabric &amp; styling guides from Si's own product data</li><li>Richer product descriptions (English + Urdu)</li><li>"About Si" page written for people and AI</li></ul></div>
+      <div class="phase"><span class="eyebrow">Weeks 6–12</span><h3>Get talked about</h3><ul>
+        <li>Pakistani fashion press &amp; creator outreach (disclosed)</li><li>Google Business Profile &amp; directory listings</li><li>An official, transparent Si presence on Reddit &amp; X</li><li>Founder story placements</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Measuring it</div>
+    <h2>How we'll know it's working</h2>
+    <p class="lead">Each month we re-run the searches above, plus the same questions in ChatGPT, Gemini and Perplexity, and report: does Si appear, where, and what is said about it — alongside site traffic from search and AI referrals.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>See what Si's site could feel like</h2>
+    <p>A working concept built from Si's real products and fabric data — Style Studio outfit builder, Fabric Library and Fabric Passport. Best on your phone.</p>
+    <a href="/">Open the concept →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <h3>Method &amp; notes</h3>
+    <p>Website checks were made on 20 November 2026 against si-retail.com's public pages, sitemap, robots.txt and Shopify product feed. Searches were run on 20 November 2026 with a web search tool based outside Pakistan, without personalisation — results seen from Pakistan, or on Google directly, may differ. "Si appears?" means no Si page or mention was among the results returned. The structured-data check covers markup present in each page's HTML. This audit describes visibility only; it makes no claims about sales or traffic, which we haven't seen.</p>
+  </div>
+</footer>
+
+</body>
+</html>
